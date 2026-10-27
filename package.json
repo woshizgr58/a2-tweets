@@ -1,0 +1,17 @@
+{
+  "name": "a2-tweets",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "watch": "tsc --project tsconfig.json --watch",
+    "serve": "live-server --host=127.0.0.1 --port=8080 --no-browser --ignore=node_modules,.git,ts",
+    "dev": "concurrently -k -n typescript,server \"npm:watch\" \"npm:serve\"",
+    "predev": "npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "9.2.1",
+    "live-server": "1.2.2",
+    "typescript": "5.9.3"
+  }
+}
